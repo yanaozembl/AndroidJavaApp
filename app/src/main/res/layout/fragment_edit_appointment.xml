@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.editing.EditAppointmentFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="412dp"
+        android:layout_height="732dp">
+
+        <TextView
+            android:id="@+id/text_view_edit_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Текущая запись к доктору"
+            android:textColor="#00BCD4"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_edit_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:text="Выбрать дату"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_edit_appointment" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_edit_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20sp"
+            app:layout_constraintStart_toStartOf="@+id/text_view_edit_date"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_edit_date"
+            >
+
+            <NumberPicker
+                android:id="@+id/number_picker_edit_day"
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:layout_marginEnd="10sp"/>
+
+            <NumberPicker
+                android:id="@+id/number_picker_edit_month"
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:layout_marginEnd="10sp"/>
+
+            <NumberPicker
+                android:id="@+id/number_picker_edit_year"
+                android:layout_width="wrap_content"
+                android:layout_height="85dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_edit_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="17sp"
+            android:text="Выбрать время"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_edit_date" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_edit_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_edit_time">
+
+            <NumberPicker
+                android:id="@+id/number_picker_edit_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:layout_marginEnd="10sp"/>
+
+            <NumberPicker
+                android:id="@+id/number_picker_edit_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="85dp"
+                android:layout_marginEnd="10sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_edit_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:text="Выбрать доктора"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout_edit_time" />
+
+        <Spinner
+            android:id="@+id/spinner_appointment_doctors_edit"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_edit_doctor" />
+
+        <Button
+            android:id="@+id/button_edit_appointment"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:text="Изменить"
+            android:backgroundTint="#00BCD4"
+            app:layout_constraintStart_toStartOf="@+id/spinner_appointment_doctors_edit"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_appointment_doctors_edit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

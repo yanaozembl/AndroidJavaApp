@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.editing.EditDoctorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/text_view_edit_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Имя доктора"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edit_text_edit_doctor_name"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:hint="ФИО доктора"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/button_add_doctor"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_edit_label" />
+
+            <EditText
+                android:id="@+id/edit_text_edit_doctor_phone"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Номер телефона"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/button_add_doctor"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_label" />
+
+            <Spinner
+                android:id="@+id/spinner_edit_speciality_of_doctor"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="@+id/button_edit_doctor"
+                app:layout_constraintTop_toBottomOf="@+id/edit_text_edit_doctor_name" />
+
+            <Button
+                android:id="@+id/button_edit_doctor"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="15dp"
+                android:text="Изменить"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_edit_speciality_of_doctor" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

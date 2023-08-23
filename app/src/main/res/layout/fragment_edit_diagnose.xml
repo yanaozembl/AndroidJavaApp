@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.editing.EditDiagnoseFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="412dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_view_edit_diagnose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="Текущий диагноз"
+                android:textColor="#00BCD4"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_textview_edit_diagnose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20sp"
+                app:layout_constraintStart_toStartOf="@+id/text_view_edit_diagnose"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_edit_diagnose">
+
+                <EditText
+                    android:id="@+id/edit_text_edit_diagnose"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:hint="Название"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_edit_diagnose" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_textview_edit_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15sp"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout_textview_edit_diagnose"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_textview_edit_diagnose">
+
+                <EditText
+                    android:id="@+id/edit_text_edit_description"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="5"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:hint="Описание"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_view_edit_diagnose" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_edit_doctor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:text="Визит к доктору, который назначил диагноз"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_textview_edit_description" />
+
+            <Spinner
+                android:id="@+id/spinner_edit_diagnose_doctors"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:spinnerMode="dialog"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_edit_doctor" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_edit_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15sp"
+                android:paddingStart="90dp"
+                app:layout_constraintStart_toStartOf="@+id/spinner_edit_diagnose_doctors"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_edit_diagnose_doctors">
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_baseline_add_24"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/circle_pattern"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Изменить снимок"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/IVPreviewImage_edit"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_baseline_insert_photo_24"
+                app:layout_constraintStart_toStartOf="@+id/linear_layout_edit_photo"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_edit_photo"/>
+
+
+            <LinearLayout
+                android:id="@+id/linear_layout_edit_medicament"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="90dp"
+                android:layout_marginTop="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/IVPreviewImage_edit">
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_baseline_add_24"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/circle_pattern"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Добавить лекарство"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list_view_edit_medicaments"
+                android:visibility="gone"
+                android:layout_width="290dp"
+                android:layout_height="80dp"
+                android:transcriptMode="alwaysScroll"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/spinner_edit_diagnose_doctors"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout_edit_medicament" />
+
+            <Button
+                android:id="@+id/button_edit_diagnose"
+                android:layout_width="250dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="Изменить"
+                android:backgroundTint="#00BCD4"
+                app:layout_constraintStart_toStartOf="@+id/spinner_edit_diagnose_doctors"
+                app:layout_constraintTop_toBottomOf="@+id/list_view_edit_medicaments" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

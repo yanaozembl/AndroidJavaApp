@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/circle_background"
+    android:orientation="vertical"
+    android:id="@+id/dialog_diagnose">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_textview_diagnose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="@+id/text_view_add_appointment"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_add_appointment"
+        >
+
+        <EditText
+            android:id="@+id/edit_text_medicament_diagnose"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:hint="Название"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_add_appointment" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/text_view_start_date_diagnose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="17sp"
+        android:text="Дата начала приема"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_textview" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_start_date_diagnose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="@+id/text_view_start_date"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_start_date"
+        >
+
+        <NumberPicker
+            android:id="@+id/number_picker_start_day_diagnose"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginEnd="10sp"/>
+
+        <NumberPicker
+            android:id="@+id/number_picker_start_month_diagnose"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginEnd="10sp"/>
+
+        <NumberPicker
+            android:id="@+id/number_picker_start_year_diagnose"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_end_date_diagnose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="17sp"
+        android:text="Дата завершения приема"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_start_date" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout_end_date_diagnose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="@+id/text_view_end_date"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_end_date"
+        >
+
+        <NumberPicker
+            android:id="@+id/number_picker_end_day_diagnose"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginEnd="10sp"/>
+
+        <NumberPicker
+            android:id="@+id/number_picker_end_month_diagnose"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginEnd="10sp"/>
+
+        <NumberPicker
+            android:id="@+id/number_picker_end_year_diagnose"
+            android:layout_width="wrap_content"
+            android:layout_height="85dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_add_medicament_diagnose"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="15dp"
+        android:text="Добавить"
+        android:backgroundTint="#00BCD4"
+        app:layout_constraintStart_toStartOf="@+id/linear_layout_end_date"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout_end_date" />
+
+</LinearLayout>
